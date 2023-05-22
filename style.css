@@ -75,45 +75,33 @@ nav a:hover {
 	font-weight: bold;
 	margin-top: 10px;
 }
-
 footer {
 	text-align: center;
 	background: url("bg.jpg");
 	padding: 40px 0;
 }
-
 .copyright {
 	color: #FFFFFF;
 	font-size: 13px;
 	margin: 20px 0 0;
 }
-
-main {
-	width: 940px;
-	margin: 0 auto;
-}
-
 form {
 	margin: 40px 0;
 }
-
 form label, form legend {
 	display:block;
 	font-size: 20px;
 	margin: 0 0 10px;
 }
-
 .input-padrao {
 	display: block;
 	margin: 0 0 20px;
 	padding: 10px 25px;
 	width: 50%;
 }
-
 .checkbox {
 	margin: 20px 0;
 }
-
 .enviar {
 	width:40%;
 	padding: 15px 0;
@@ -138,6 +126,27 @@ form label, form legend {
 	font-size: 2em;
 	margin: 0 0 1em;
 	clear: left;
+ text-shadow: 2px 2px #FF0000;
+}
+.titulo-principal: first-letter{
+	font-weight: bold;
+}
+p: first-line{
+	font-style: italic;
+}
+.titulo-principal: before{
+	content: "["
+}
+.titulo-principal: after{
+	content: "]"
+}
+.principal{
+	padding: 3em 0;
+	background-color: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+	width: 940px;
+	margin: 0 auto;
 }
 .principal p{
 	margin: 0 0 1em;
@@ -165,15 +174,36 @@ form label, form legend {
 .itens{
 	line-height: 1.5;
 }
-.itens: first-child{
+.itens:nth-child(2n){
 	font-weight: bold;
+}
+.itens:before{
+	content: "✧"
+}
+.beneficios{
+	padding: 3em 0;
+	background-color: #888888;
 }
 .imagembeneficios{
 	width: 50%;
+	opacity: 0.3;
+	transition: 400ms;
+	box-shadow: 10px 10px 5px #000000;
+}
+.imagembeneficios:hover{
+	opacity: 1;
+}
+.mapa{
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888);
 }
 .mapa p{
 	margin: 0 0 2em;
 	text-align: center;
+}
+.mapa-conteudo{
+	width: 940px;
+	margin: 0 auto;
 }
 .video{
 	width: 560px;
