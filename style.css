@@ -126,7 +126,8 @@ form label, form legend {
 	font-size: 2em;
 	margin: 0 0 1em;
 	clear: left;
- text-shadow: 2px 2px #FF0000;
+ text-shadow: 2px 2px #000000;
+
 }
 .titulo-principal: first-letter{
 	font-weight: bold;
@@ -183,12 +184,13 @@ p: first-line{
 .beneficios{
 	padding: 3em 0;
 	background-color: #888888;
+	box-shadow: inset 0 0 30px #FF0000;
 }
 .imagembeneficios{
 	width: 50%;
 	opacity: 0.3;
 	transition: 400ms;
-	box-shadow: 10px 10px 5px #000000;
+	box-shadow: 10px 10px 5px #FAFAD2;
 }
 .imagembeneficios:hover{
 	opacity: 1;
