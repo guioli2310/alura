@@ -1,79 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Barbearia Alura</title>
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="cabeca"> 
+        <nav>
+            <ul>
+                <li><a href="livros.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <h1>Bem-vindo à Livraria Online</h1>
+    <p>Insira o valor total da sua compra:</p>
+    <input type="number" id="valorCompra" placeholder="Insira o valor em R$">
+    <button onclick="calcularDesconto()">Calcular Desconto</button>
+    <p>Desconto aplicado: <span id="desconto"></span></p>
+    <form>
+        Defina seu nível de satisfação:<br>
+        Pouco satisfeito
+        <input type="range" name="satisfacao" min="0" max="10">
+        Muito satisfeito
+        <br>
+    <main>
+        <ul class="produtos">
+            <li>
+                <h2>HARRY POTTER</h2>
+                <img src="harry.jpg" id="livros">
+            </li>
+            <li>
+                <h2>ROMANCE</h2>
+                <img src="romance.webp" id="livros">
+            </li>
+            <li>
+                <h2>TERROR</h2>
+                <img src="terror.webp" id="livros">
+            </li>
+        </ul>
+    </main>
+    <input type="button" value="Clique Aqui" onclick="msg()">
+    <script>
+        function msg() {
+                alert("Você clicou no botão!");
+            }
 
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-	</head>
+        function calcularDesconto() {
+            const valorCompra = parseFloat(document.getElementById('valorCompra').value);
 
-	<body>
-		<header>
-			<div class="caixa">
-				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+            let desconto = 0;
 
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="produtos.html">Produtos</a></li>
-						<li><a href="contato.html">Contato</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+            if(valorCompra > 200) {
+                desconto = 0.2; // 20%
+            } else if (valorCompra > 100) {
+                desconto = 0.1; // 10%
+            }else if (valorCompra <= 100) {
+                desconto = 0.05; // 5%
+            }
 
-		<img id="banner" src="banner.jpg">
-
-		<main>
-			<p> Qualquer coisa</p>
-
-		<section class="principal">
-			<h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
-			<img class="utensilios" src="utensilios.jpg" alt="utensilios de Barbearia">
-
-			<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque
-				 na cidade e conquista novos clientes a cada dia.</p>
-
-			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
-
-			<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-		</section>
-
-		<section class="mapa">
-			<h3 class="titulo-principal">Nosso Estabelecimento</h3>
-			<p> Estamos Localizado no coração da cidade</p>
-			<div class="mapa-conteudo">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68910.88904972818!2d-54.17105505136722!3d-25.300405299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6acb0bb5df8b7%3A0x7ec5145e45e50b0e!2sJo%C3%A3o%20Manuel%20Mondrone%20-%20R.%20Rio%20Branco%20-%20Cidade%20Alta%2C%20Medianeira%20-%20PR%2C%2085884-000!5e1!3m2!1spt-BR!2sbr!4v1684149589510!5m2!1spt-BR!2sbr" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-  </section>
-
-		<section class="beneficios">
-			<h3 class="titulo-principal">Benefícios</h3>
-
-			<div class="conteudo-beneficios">
-
-			<ul class="lista-beneficios">
-				<li class="itens">Atendimento aos Clientes</li>
-				<li class="itens">Espaço diferenciado</li>
-				<li class="itens">Localização</li>
-				<li class="itens">Profissionais Qualificados</li>
-			</ul>
-			<img src="beneficios.jpg" class="imagembeneficios">
-		</div>
-
-			<div class="video">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</section>
-	</main>
-
-		<footer>
-			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
-			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
-		</footer>
-
-	</body>
+            const valorDesconto = valorCompra * desconto;
+            document.getElementById('desconto').textContent = `R$ ${valorDesconto.toFixed(2)}`;
+        }
+    </script>
+</body>
 </html>
